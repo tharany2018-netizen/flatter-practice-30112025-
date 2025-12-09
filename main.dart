@@ -1,16 +1,24 @@
+import 'package:flutter/material.dart';
 
+void main() {
+  runApp(MyApp());
+}
 
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
-
-
-import 'dice.dart';
-
-
-
-void main (List<String>args){
-  Dice dice=Dice(sides:6);
-  dice.roll();
-
-
-
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: Text("Hello Bestie!")),
+        body: Center(
+          child: Text(
+            "Welcome to Flutter!",
+            style: TextStyle(fontSize: 22),
+          ),
+        ),
+      ),
+    );
+  }
 }
